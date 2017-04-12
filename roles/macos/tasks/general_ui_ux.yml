@@ -115,11 +115,11 @@
   notify:
     - killall
 
-- name: Set interface style to Dark
-  osx_defaults:
-    domain: NSGlobalDomain
-    key: AppleInterfaceStyle
-    type: string
-    value: Dark
-  notify:
-    - killall
+# - name: Set interface style to Dark
+#   osx_defaults:
+#     domain: NSGlobalDomain
+#     key: AppleInterfaceStyle
+#     type: string
+#     value: Dark
+#   notify:
+#     - killall
