@@ -1,0 +1,15 @@
+---
+
+# Override default role variables here.
+
+# dock items
+# ------------------------------------------------------------------------------
+
+dock_apps:
+  - Skype.app
+  - Google Chrome.app
+  - Evernote.app
+  - Skitch.app
+  - Calendar.app
+  - Wunderlist.app
+  - System Preferences.app

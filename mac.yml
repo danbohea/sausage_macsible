@@ -1,0 +1,62 @@
+---
+- name: Mac setup
+  hosts: localhost
+  connection: local
+
+  vars_files:
+    - config.yml
+    - config.local.yml
+
+  pre_tasks:
+    - name: Ensure host is running macOS
+      fail: msg="The host (target) system is not running macOS."
+      when: ansible_os_family != "Darwin"
+      tags: always
+
+  roles:
+
+    # Prep
+    # --------------------------------------------------------------------------
+
+    - { role: macos, tags: ["macos","prep"] }
+    - { role: danbohea.google-chrome, tags: ["google_chrome","prep"] }
+    - { cask_app_name: "dropbox", tags: ["dropbox","prep"], role: danbohea.cask-app }
+    - { role: quick_look_plugins, tags: ["quick_look_plugins","prep"] }
+
+    # Stage 1
+    # --------------------------------------------------------------------------
+
+    - { role: danbohea.flux, tags: ["flux","stage_1"] }
+    - { role: evernote, tags: ["evernote","stage_1"] }
+    - { cask_app_name: "alfred", tags: ["alfred","stage_1","sudo"], role: danbohea.cask-app }
+    - { cask_app_name: "the-unarchiver", tags: ["the_unarchiver","stage_1"], role: danbohea.cask-app }
+    - { role: danbohea.skype, tags: ["skype","stage_1"] }
+    - { cask_app_name: "adobe-creative-cloud", tags: ["adobe_creative_cloud","stage_1"], role: danbohea.cask-app }
+    - { cask_app_name: "google-hangouts", tags: ["google_hangouts","stage_1"], role: danbohea.cask-app }
+    - { cask_app_name: "hazel", tags: ["hazel","stage_1"], role: danbohea.cask-app }
+    - { cask_app_name: "daisydisk", tags: ["daisydisk","stage_1"], role: danbohea.cask-app }
+    - { cask_app_name: "flash-player", tags: ["flash_player","stage_1"], role: danbohea.cask-app }
+    - { cask_app_name: "google-drive", tags: ["google_drive","stage_1"], role: danbohea.cask-app }
+    - { cask_app_name: "skitch", tags: ["skitch","stage_1"], role: danbohea.cask-app }
+    - { cask_app_name: "vlc", tags: ["vlc","stage_1"], role: danbohea.cask-app }
+    - { cask_app_name: "google-plus-auto-backup", role: danbohea.cask-app, tags: ["google_plus_auto_backup","stage_1"] }
+    - { cask_app_name: "sketchup", role: danbohea.cask-app, tags: ["sketchup","stage_1"] }
+    - { cask_app_name: "appcleaner", tags: ["appcleaner","stage_1"], role: danbohea.cask-app }
+    - { cask_app_name: "crashplan", tags: ["crashplan","stage_1","prompt"], role: danbohea.cask-app }
+
+    # Last
+    # --------------------------------------------------------------------------
+
+    - { role: danbohea.dock-items, tags: ["dock_items","last","always"] }
+    - { role: login_items, tags: ["login_items","last","always"] }
+
+  post_tasks:
+
+    - osx_say:
+        msg: "This playbook is done diddly done."
+        voice: Fred
+      tags: no_ci
+
+    - debug:
+        msg: "Some changes may not take effect until you've restarted your Mac."
+      tags: always
