@@ -29,6 +29,7 @@
     - { role: quick_look_plugins, tags: ["quick_look_plugins","stage_1"] }
     - { role: danbohea.flux, tags: ["flux","stage_1"] }
     - { role: danbohea.skype, tags: ["skype","stage_1"] }
+    - { cask_app_name: "onedrive", tags: ["onedrive","stage_1"], role: danbohea.cask-app }
     - { cask_app_name: "alfred", tags: ["alfred","stage_1","sudo"], role: danbohea.cask-app }
     - { cask_app_name: "the-unarchiver", tags: ["the_unarchiver","stage_1"], role: danbohea.cask-app }
     - { cask_app_name: "adobe-creative-cloud", tags: ["adobe_creative_cloud","stage_1"], role: danbohea.cask-app }
