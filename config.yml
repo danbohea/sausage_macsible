@@ -6,7 +6,6 @@
 # ------------------------------------------------------------------------------
 
 dock_apps:
-  - Skype.app
   - Google Chrome.app
   - Evernote.app
   - Skitch.app
