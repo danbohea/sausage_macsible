@@ -20,17 +20,17 @@
 
     - { role: macos, tags: ["macos","prep"] }
     - { role: danbohea.google-chrome, tags: ["google_chrome","prep"] }
-    - { cask_app_name: "dropbox", tags: ["dropbox","prep"], role: danbohea.cask-app }
     - { role: quick_look_plugins, tags: ["quick_look_plugins","prep"] }
+    - { cask_app_name: "dropbox", tags: ["dropbox","prep"], role: danbohea.cask-app }
 
     # Stage 1
     # --------------------------------------------------------------------------
 
     - { role: danbohea.flux, tags: ["flux","stage_1"] }
     - { role: evernote, tags: ["evernote","stage_1"] }
+    - { role: danbohea.skype, tags: ["skype","stage_1"] }
     - { cask_app_name: "alfred", tags: ["alfred","stage_1","sudo"], role: danbohea.cask-app }
     - { cask_app_name: "the-unarchiver", tags: ["the_unarchiver","stage_1"], role: danbohea.cask-app }
-    - { role: danbohea.skype, tags: ["skype","stage_1"] }
     - { cask_app_name: "adobe-creative-cloud", tags: ["adobe_creative_cloud","stage_1"], role: danbohea.cask-app }
     - { cask_app_name: "google-hangouts", tags: ["google_hangouts","stage_1"], role: danbohea.cask-app }
     - { cask_app_name: "hazel", tags: ["hazel","stage_1"], role: danbohea.cask-app }
