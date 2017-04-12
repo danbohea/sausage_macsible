@@ -14,7 +14,7 @@
     domain: com.apple.dock
     key: orientation
     type: string
-    value: "bottom"
+    value: "left"
   notify:
     - killall Dock
 
