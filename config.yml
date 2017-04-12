@@ -13,3 +13,14 @@ dock_apps:
   - Calendar.app
   - Wunderlist.app
   - System Preferences.app
+
+# login items
+# ------------------------------------------------------------------------------
+
+login_items_apps:
+  - Alfred 3.app
+  - CrasPlan menu bar.app
+  - Dropbox.app
+  - Flux.app
+  - Google Photos Backup.app
+  - HazelHelper.app
