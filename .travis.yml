@@ -7,9 +7,6 @@ matrix:
     # macOS 10.12
     - os: osx
       osx_image: xcode8.2
-    # macOS 10.11
-    - os: osx
-      osx_image: xcode8
 
 install:
   # Debug info
