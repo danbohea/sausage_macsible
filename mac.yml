@@ -43,6 +43,7 @@
     - { cask_app_name: "google-plus-auto-backup", role: danbohea.cask-app, tags: ["google_plus_auto_backup","stage_1"] }
     - { cask_app_name: "sketchup", role: danbohea.cask-app, tags: ["sketchup","stage_1"] }
     - { cask_app_name: "appcleaner", tags: ["appcleaner","stage_1"], role: danbohea.cask-app }
+    - { role: node_pkgs, tags: ["node_pkgs","stage_1"] }
     - { cask_app_name: "imageoptim", tags: ["imageoptim","stage_1"], role: danbohea.cask-app }
     - { cask_app_name: "crashplan", tags: ["crashplan","stage_1","prompt"], role: danbohea.cask-app }
 
