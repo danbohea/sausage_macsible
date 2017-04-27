@@ -29,6 +29,7 @@
     - { role: quick_look_plugins, tags: ["quick_look_plugins","stage_1"] }
     - { role: danbohea.flux, tags: ["flux","stage_1"] }
     - { role: danbohea.skype, tags: ["skype","stage_1"] }
+    - { role: node_pkgs, tags: ["node_pkgs","stage_1"] }
     - { cask_app_name: "onedrive", tags: ["onedrive","stage_1"], role: danbohea.cask-app }
     - { cask_app_name: "alfred", tags: ["alfred","stage_1","sudo"], role: danbohea.cask-app }
     - { cask_app_name: "the-unarchiver", tags: ["the_unarchiver","stage_1"], role: danbohea.cask-app }
@@ -43,7 +44,6 @@
     - { cask_app_name: "google-plus-auto-backup", role: danbohea.cask-app, tags: ["google_plus_auto_backup","stage_1"] }
     - { cask_app_name: "sketchup", role: danbohea.cask-app, tags: ["sketchup","stage_1"] }
     - { cask_app_name: "appcleaner", tags: ["appcleaner","stage_1"], role: danbohea.cask-app }
-    - { role: node_pkgs, tags: ["node_pkgs","stage_1"] }
     - { cask_app_name: "imageoptim", tags: ["imageoptim","stage_1"], role: danbohea.cask-app }
     - { cask_app_name: "crashplan", tags: ["crashplan","stage_1","prompt"], role: danbohea.cask-app }
 
